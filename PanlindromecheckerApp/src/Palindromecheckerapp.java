@@ -2,16 +2,16 @@ import java.util.*;
 
 public class Palindromecheckerapp {
     public static void main(String[] args) {
-        String word = "refer";
-        Deque<Character> deque = new ArrayDeque<>();
+        String word = "level";
+        LinkedList<Character> list= new LinkedList<>();
         boolean ispalindrome = true;
 
         for (char c : word.toCharArray()) {
-            deque.addLast(c);
+            list.addLast(c);
         }
 
-        while (deque.size() > 1) {
-            if (!deque.removeFirst().equals(deque.removeLast())) {
+        while (list.size() > 1) {
+            if (!list.removeFirst().equals(list.removeLast())) {
                 ispalindrome = false;
                 break;
             }
